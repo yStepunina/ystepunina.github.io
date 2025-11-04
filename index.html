@@ -6,15 +6,21 @@
   </head>
   <body class="body">
      <header class="page-header">
-<a class="page-header__logo" href="g">Logo</a>
+        <div class="page-header__container">
+<a class="page-header__logo" href="g"></a>
+<img
+scr="./assets/images/logo.svg"
+class="page-header__logo-icon"
+alt="logo"
+/>
 <nav class="page-header__nav">
     <a class="page-header__nav-link" href="g">Мероприятия</a>
     <a class="page-header__nav-link" href="g">Блог</a>
     <a class="page-header__nav-link" href="g">О нас</a>
     <a class="page-header__nav-link" href="g">Контакты</a>
 </nav>
-<a class="page-header__user-link" href="g">Войти</a>
-     </header>
+<a class="page-header__btn btn" href="g">Войти</a>
+ </div>
      <main class="main">
         <div class="home"> </div>
         <header class="main-header home__main-header">
@@ -28,16 +34,22 @@
         <div>
         <section class="about home__about">
             <h2 class="section__about section-title"> О нас</h2>
-            </div>
+            </div class="about__container">
         </section>
-        <section>
-            <h2>Мероприятия</h2>
+        <div>
+        <section class="upcoming home__upcoming">
+            <h2 class=" upcoming__section-title section-title">Мероприятия</h2>
+</div class="upcoming__container">
         </section>
-        <section>
-            <h2>Блог</h2>
+        <div> 
+        <section class="listing home__listing">
+            <h2 class="listing__section-title section-title">Блог</h2>
         </section>
-        <section>
-            <h2>Контакты</h2>
+</div>
+        <div>
+        <section class="contacts home__contacts">
+            <h2 class="contacts__section-title section-title">Контакты</h2>
+             </div class="contacts__container">
         </section>
      </main>
      <footer class="page-footer"></footer>
