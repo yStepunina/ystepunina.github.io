@@ -201,8 +201,10 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 406px;
-  height: 434px;
+  width: 306px;
+  height: 334px;
+  padding-left: 293px;
+  padding-right: 51px;
   object-fit: cover;
 }
 
@@ -213,9 +215,11 @@ body {
   font-weight: 600;
   font-size: 24px;
   line-height: 33px;
+  margin-top: 42px;
   text-decoration: underline transparent;
   transition: color 0.2s, text-decoration-color 0.2s;
 }
+
 
 .event-card__description {
   margin: 0 0 auto;
@@ -230,7 +234,6 @@ body {
   line-height: 19px;
 }
 
- 	
 .listing__event-card {
   margin-right: 58px;
 }
@@ -279,4 +282,3 @@ listing__events-list {
 .text--justify {
   text-align: justify;
 }
-
