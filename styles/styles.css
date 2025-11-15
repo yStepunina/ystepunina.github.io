@@ -149,6 +149,7 @@ body {
 .listing__events-list {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 -30px -120px;
 }
 
 .events {
@@ -202,8 +203,8 @@ body {
   top: 0;
   left: 0;
   width: 306px;
-  height: 334px;
-  padding-left: 293px;
+  height: 338px;
+  padding-left: 283px;
   padding-right: 51px;
   object-fit: cover;
 }
@@ -213,9 +214,9 @@ body {
   min-height: 66px;
   color: #1F1E1E;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 24px;S
   line-height: 33px;
-  margin-top: 42px;
+  padding-bottom: -300px;
   text-decoration: underline transparent;
   transition: color 0.2s, text-decoration-color 0.2s;
 }
@@ -235,7 +236,7 @@ body {
 }
 
 .listing__event-card {
-  margin-right: 58px;
+  margin-right: 60px;
 }
 
 .listing__event-card:nth-child(3n) {
@@ -263,22 +264,43 @@ listing__events-list {
   line-height: 1.25;
 }
 
-.text {
-  background: rgba(255, 255, 255, 1);
+.event {
+  padding: 40px 0 150px;
 }
 
-.text--left {
-  text-align: left;
+.reserve {
+  display: grid;
+  gap: 65px 11%;
+  grid-template-columns: 405px calc(89% - 405px);
+  grid-template-areas: 
+    "checks scheme"
+    "order legend"; 
+  width: 100%;
 }
 
-.text--right {
-  text-align: right;
+.reserve__checks {
+  grid-area: checks;
 }
 
-.text--center {
+.reserve__order {
+  grid-area: order;
+}
+
+.reserve__scheme {
+  grid-area: scheme;
+}
+
+.reserve__scheme {
+  grid-area: scheme;
+}
+
+.reserve > div {
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: coral;
   text-align: center;
 }
 
-.text--justify {
-  text-align: justify;
+.footer {
+
 }
