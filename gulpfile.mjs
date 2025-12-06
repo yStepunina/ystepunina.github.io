@@ -53,12 +53,10 @@ function includeHtml() {
   return gulp
     .src("src/html/*.html")
     .pipe(plumber())
-    .pipe(
-      include({
+    .pipe(include({
         prefix: "@@",
-        basepath: "@file",
-      })
-    )
+        basepath: "@file"
+        }))
     .pipe(formatHtml())
     .pipe(gulp.dest("dist"));
 }
@@ -72,8 +70,7 @@ function style() {
       postcss([
         autoprefixer({ overrideBrowserslist: ["last 4 version"] }),
         sortMediaQueries({
-          sort: "desktop-first",
-        }),
+          sort: "desktop-first"})
       ])
     )
     .pipe(gulp.dest("dist/styles"))
@@ -89,7 +86,7 @@ function js() {
     .pipe(
       include({
         prefix: "//@@",
-        basepath: "@file",
+        basepath: "@@file",
       })
     )
     .pipe(gulp.dest("dist/scripts"))
@@ -175,8 +172,7 @@ function serve() {
   gulp.watch(resources.jsDev, gulp.series(js, reloadServer));
   gulp.watch(resources.jsVendor, gulp.series(jsCopy, reloadServer));
   gulp.watch(resources.static, { delay: 500 }, gulp.series(copy, reloadServer));
-  gulp.watch(
-    resources.images,
+  gulp.watch(resources.images,
     { delay: 500 },
     gulp.series(images, reloadServer)
   );
