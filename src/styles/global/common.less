@@ -1,28 +1,27 @@
-html,
-body {
+html,body {
   width: 100%; 
   margin: 0;
   padding: 0;
-} 
+}
 
-.body {
+body {
   box-sizing: border-box;
-  position: relative;
   display: flex;
   flex-direction: column;
-  min-width: 1300px;
-  min-height: 100vh; 
-  background-color: rgba(222, 222, 222, 1);
-  background-image: url(../assets/images/noise.png);
+  min-height: 100vh;
+  background-color: #dedede;
+  background-image: url(../assets/images/noise.png), url(../assets/images/bg.png);
   background-position: 0 0, 0 0;
   background-size: auto, 100% auto;
   background-repeat: repeat, repeat-y;
+  color: #1F1E1E;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
   font-style: normal;
   line-height: 1.375;
-  overflow: hidden;
+  overflow-x: hidden;
+  padding-top: 147px;
 }
 
 .main {
@@ -31,14 +30,15 @@ body {
 
 .page-footer {
   flex: 0 0 auto;
- }
+}
 
- a{
-    color: #1f1e1e;
-    outline: none;
- }
- img{
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
- }
+a {
+  color: #1F1E1E;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}

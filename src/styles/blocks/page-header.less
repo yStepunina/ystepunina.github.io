@@ -1,16 +1,11 @@
-.page-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 147px;
-  display: flex;
-  align-items: center;
-  background-color: rgba(222, 222, 222, 0.5);
-  backdrop-filter: blur(20px);
-  z-index: 100;
-  &__container{ 
-.container();
+	.page-header {
+  /* Стили блока шапки */
+
+  &__container {
+    .container();
+    display: flex;
+    align-items: center;
+  }
 }
 
  &__logo {
@@ -19,16 +14,19 @@
   height: 147px;
   font-size: 0;
   text-decoration: none;
+  display: block;
 }
 
  &__logo-icon {
   width: 100%;
   height: 100%;
 }
+
  &__nav {
   display: flex;
   align-items: baseline;
   margin: 0 auto;
+  gap: 50px;
 }
 
  &__nav-link {
@@ -42,6 +40,8 @@
 }
 
  &__right-block {
-    width: 202px;
- }
-  }
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 202px;
+ } 

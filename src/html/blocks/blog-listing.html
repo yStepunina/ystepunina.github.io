@@ -1,20 +1,21 @@
-<section class="listing @@class">
-  <h2 class="section-title listing__title">
-     Блог
-  </h2>
-    <div class="listing__article-list">
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('blocks/head.html')
+
+  <body class="body">
+    @@include('blocks/page-header.html')
+
+    <main class="main">
+      <div class="home">
+        <!-- прочая разметка -->
+
         <!-- prettier-ignore -->
-        @@loop('article-card.html', [
-         {
-            "class": "",
-            "img": "",
-            "alt": "",
-            "title": "",
-            "descr": "",
-            "time": "",
-            "datetime": ""
-         }
-        ])
-    </div>
-    <a href="#" class="listing__link link">Смотреть все</a>
-</section>
+        @@include('blocks/blog-listing.html', {"class": "home__listing"})
+
+        <!-- прочая разметка -->
+      </div>
+    </main>
+
+    @@include('blocks/page-footer.html')
+  </body>
+</html>

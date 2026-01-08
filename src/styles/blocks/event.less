@@ -1,3 +1,62 @@
+html,
+body {
+  width: 100%; 
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 680px;
+  min-height: 100vh;
+  color: #1F1E1E;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.375;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
 .event {
   padding: 40px 0 150px;
+}
+
+.reserve {
+  display: grid;
+  gap: 65px 11%;
+  grid-template-columns: 405px calc(89% - 405px);
+  grid-template-areas: 
+    "checks scheme"
+    "order legend"; 
+  width: 100%;
+}
+
+.reserve__checks {
+  grid-area: checks;
+}
+
+.reserve__order {
+  grid-area: order;
+}
+
+.reserve__scheme {
+  grid-area: scheme;
+}
+
+.reserve__scheme {
+  grid-area: scheme;
+}
+
+.reserve > div {
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: coral;
+  text-align: center;
 }

@@ -102,10 +102,22 @@
   }
 }
 
- 	
+
 .article-card {
-  position: relative;
   /* прочие стили */
+
+  &__link {
+  /* прочие стили */
+
+    &:hover {
+      & ~ .article-card__info {
+        .article-card__title-link {
+          color: @red;
+          text-decoration-color: @red;
+        }
+      }
+    }
+  }
 
   & + .article-card {
     margin-top: 120px;
