@@ -1,5 +1,8 @@
 .container {
   box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   max-width: 1414px;
   margin: 0 auto;
@@ -21,7 +24,7 @@
 }
 
 .color-red {
-  color: @red;
+   color: @red;
 }
 
 .show-event-popup {
@@ -33,21 +36,17 @@
   }
 }
 
-.mixin(@width: 100px, @height: 50px) {
-  width: @width;
-  height: @height;
-
-  /* прочие свойства */
-}
-
-.element_1 {
-  .mixin();
-}
-
-.element_2 {
-  .mixin(80px);
-}
-
-.element_3 {
-  .mixin(80px 70px);
+.is-hidden {
+  position: absolute !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(100%) !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }

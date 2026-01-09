@@ -1,7 +1,9 @@
 .article-card {
   box-sizing: border-box;
+
   display: flex;
   width: 100%;
+
   &:hover {
     .article-card__picture {
       box-shadow: 0 0 30px fade(@black, 55%);
@@ -121,7 +123,7 @@
 
   & + .article-card {
     margin-top: 120px;
-
+    
     &::before {
       content: "";
       display: block;

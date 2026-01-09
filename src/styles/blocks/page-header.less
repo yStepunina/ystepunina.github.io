@@ -1,12 +1,19 @@
-	.page-header {
-  /* Стили блока шапки */
+		
+.page-header {
+  background-color: rgba(222, 222, 222, 0.98);
+}
 
+@supports (backdrop-filter: blur(20px)) {
+  .page-header {
+    background-color: rgba(222, 222, 222, 0.5);
+    backdrop-filter: blur(20px);
+  }
+}
   &__container {
     .container();
     display: flex;
     align-items: center;
   }
-}
 
  &__logo {
   flex-shrink: 0;
@@ -20,6 +27,7 @@
  &__logo-icon {
   width: 100%;
   height: 100%;
+  display: block;
 }
 
  &__nav {

@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
   @@include('blocks/head.html')
-   <div class="body">
-     @@include('blocks/page-header.html')
+  <body class="body">
+    <div class="body">
+      @@include('blocks/page-header.html')
       <main class="main">
        <div class="events">
-  <section class="listing events__listing">
-    <h2 class="listing__title section-title">Мероприятия</h2>
+      <section class="listing events__listing">
+        <h2 class="listing__title section-title">Мероприятия</h2>
 
-    <div class="listing__events-list">
-      <!-- prettier-ignore -->
-      @@loop('blocks/event-card.html', [
+       <div class="listing__events-list">
+       <!-- prettier-ignore -->
+       @@loop('blocks/event-card.html', [
         {
           "class": "listing__event-card",
           "img": "assets/images/events/nirvana.jpg",
@@ -39,10 +40,26 @@
           "datetime": "2024-12-16T20:00"
         }
       ])
-    </div>
-  </section>
-  </main>
- @@incloud('blocks/page-footer.html')
- @@include('bloks/event-pp.html')
- </body>
+        </div>
+      </section>
+      <section class="events__services">
+       <h2 class="events__section-title section-title section-title--sub">
+         Дополнительные услуги
+        </h2>
+
+         <p class="events__section-description">
+         Перед запуском проекта, мы подготавливаем подробную смету и 
+         согласуем ее с клиентом. Убедившись, что все пожеланию учтены и мы
+         можем приступать к реализациии проекта, начинается сложная, но
+         интересная работа, результатом которой будет проведение вашего
+         мероприятия на высшем уровне.
+         </p>
+
+         @@include('blocks/table.html')
+      </section>
+      </div>
+      </main>
+      <footer class="page-footer"></footer>
+       @@include('bloks/event-pp.html')
+  </body>
  </html>

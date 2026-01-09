@@ -1,3 +1,12 @@
+.show-event-popup {
+  body {
+    overflow: hidden;
+  }
+  #eventPP {
+    display: flex;
+  }
+}
+
 .pp {
   box-sizing: border-box;
   position: fixed;
@@ -5,26 +14,38 @@
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 90px 90px 50px;
+  padding: 90px 95px 50px;
+  background-color: rgba(28, 27, 27, 0.4);
   backdrop-filter: blur(50px);
-  background: rgba(28, 27, 27, 0.4);
   overflow-y: auto;
   z-index: 110;
   display: none;
+
+
   &__wrapper {
     box-sizing: border-box;
     position: relative;
     display: flex;
     flex-direction: column;
-    max-width: 1210px;
     width: 100%;
+    max-width: 1210px;
     margin: auto;
-    background-color: #dedede;
+    background-color: @gray;
     background-image: url(../assets/images/noise.png);
-    background-position: 0 0, 0 0;
-    background-size: auto, 100% auto;
-    background-repeat: repeat, repeat-y;
+    background-position: 0 0;
+    background-size: auto;
+    background-repeat: repeat;
   }
+  &__container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 40px 40px;
+  }
+}
+
+.pp {
   &__sticky-close {
     position: sticky;
     top: 0;
@@ -37,19 +58,14 @@
     top: -30px;
     right: -30px;
   }
-  &__container {
-    box-sizing: border-box;
-    max-width: 1040px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 40px 40px;
-  }
   &__title {
-    position: relative;
-    margin: -40px 0 70px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    margin: -40px 0 70px -85px;
     padding: 10px 85px;
-    max-width: 595px;
-    width: 100%;
+    width: 595px;
+    min-height: 80px;
     background-color: @black;
     text-transform: uppercase;
     font-weight: 400;
@@ -57,7 +73,7 @@
     font-size: 22px;
     line-height: 1.36;
     color: @white;
-    letter-spacing: 0.02cm;
+    letter-spacing: 0.02em;
     z-index: 1;
-    }
+  }
 }
