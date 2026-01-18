@@ -1,37 +1,31 @@
 <header class="page-header">
   <div class="page-header__container">
-    <meta charset="UTF-8" />
-    <title>Page title</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles/styles.css" />
-
-    <a href="index.html" class="page-header__logo">
-      <svg 
-        class="page-header__logo-icon" 
-        width="202" 
-        height="147" 
-        viewBox="0 0 202 147" 
-        fill="none" 
-        xmlns="http://www.w3.org/2000/svg">
-        <!-- содержимое свг -->
+    <a href="#" class="page-header__logo">
+      <svg class="page-header__logo-icon" width="202" height="147">
+        <use xlink:href="assets/icons/symbols.svg#logo">
+      </svg>
+    </a>
+    <nav class="page-header__nav">
+      <a href="#" class="page-header__nav-link">Мероприятия</a>
+      <a href="#" class="page-header__nav-link">Блог</a>
+      <a href="#" class="page-header__nav-link">О нас</a>
+      <a href="#" class="page-header__nav-link">Контакты</a>
+      <div class="page-hader__nav-user">
+        <a href="#" class="page-hader__nav-user link">Александр С.</a>
+        <a href="#" class="page-hader__nav-logout">
+        <svg class="page-header__logo-icon" width="24" height="24">
+        <use xlink:href="assets/icons/symbols.svg#logo-in">
       </svg>
        </a>
-      
-      <nav class="page-header__nav">
-        <a href="#" class="page-header__nav-link">Мероприятия</a>
-        <a href="#" class="page-header__nav-link">Блог</a>
-        <a href="#" class="page-header__nav-link">О нас</a>
-        <a href="#" class="page-header__nav-link">Контакты</a>
-      </nav>
-    
-      
-      <div class="page-header__right-block">
-        <a href="#" class="btn page-header__user-btn">
-          Войти
-    </a>
       </div>
-   </div>
-      
+    </nav>
+    <div class="page-header__right-block">
+      <a href="#" class="btn page-header__btn">Войти
+        <svg class="page-header__user-icon" width="24" height="24">
+          <use xlink:href="assets/icons/symbols.svg#user">
+        </svg>
+      </a>
+      <button type="button" class="page-header__nav-toggle"></button>
+    </div>
+  </div>  
 </header>
