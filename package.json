@@ -5,6 +5,7 @@
   "author": "hello@dignity.codes",
   "devDependencies": {
     "autoprefixer": "^10.4.21",
+    "baseline-browser-mapping": "^2.9.15",
     "browser-sync": "^3.0.4",
     "del": "^8.0.1",
     "gulp": "^5.0.1",
@@ -28,6 +29,6 @@
   "scripts": {
     "build": "gulp build",
     "serve": "gulp serve",
-    "start": "gulp start" 
+    "start": "gulp start"
   }
 }

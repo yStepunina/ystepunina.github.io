@@ -1,15 +1,25 @@
 .article-card {
   box-sizing: border-box;
-
+  position: relative;
   display: flex;
   width: 100%;
+  @media @bw1170 {
+    flex-direction: column;
+    max-width: 708px;
+  }
 
-  &:hover {
+  &:active {
     .article-card__picture {
       box-shadow: 0 0 30px fade(@black, 55%);
     }
   }
-
+  &:hover {
+    @media (hover: hover) {
+     .article-card__picture {
+        box-shadow: 0 0 30px fade(@black, 55%);
+      }
+    }
+  }
   &__link {
     flex-shrink: 0;
     align-self: flex-start;
@@ -18,6 +28,12 @@
     margin-right: 60px;
     font-size: 0;
     text-decoration: none;
+    @media @bw1660 {
+      margin-right: 40px;
+    }
+    @media @bw1340 {
+      margin-right: 30px;
+    }
   }
 
   &__picture {
