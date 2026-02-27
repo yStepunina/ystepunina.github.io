@@ -35,12 +35,19 @@ body {
 a {
   color: #1F1E1E;
   outline: none;
+  text-decoration: none;
+
+  &:hover {
+    color: #bc3324;
+    text-decoration: underline;
+  }
 }
 
 img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
+  display: block;
 }
 
 input,
@@ -50,15 +57,24 @@ select {
   outline: none;
   color: @black;
   font-family: @font1;
+  border: 1px solid #cccccc;
+  padding: 8px 12px;
+  border-radius: 4px;
 
   color: #6c6c6c;
+
+  &:focus {
+    border-color: #000000;
+  }
 }
+
 input,
 textarea {
   &::placeholder {
     color: #6c6c6c;
   }
 }
+
 input:focus,
 textarea:focus {
   &::placeholder {

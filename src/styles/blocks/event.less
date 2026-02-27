@@ -17,6 +17,7 @@
     font-family: @font1;
     color: @black;
     font-weight: 600;
+    
     &:first-child {
       margin-top: 0;
     }
@@ -125,9 +126,11 @@
   & > iframe,
   & > figure {
     margin: 30px 0;
+
     &:first-child {
       margin-top: 0;
     }
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -139,6 +142,8 @@
   }
 
   figure {
+     margin: 0;
+
     img {
       max-width: 100%;
       margin: 0;
@@ -151,9 +156,11 @@
     font-weight: 500;
     font-size: 13px;
     text-align: left;
+
     &:first-child {
       margin-top: 0;
     }
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -163,6 +170,7 @@
     &[align],
     &.alignright {
       margin: 5px 0;
+
       & + figcaption {
         display: none;
       }
@@ -193,6 +201,7 @@
     text-decoration: none;
     transition: color 0.2s;
     cursor: pointer;
+
     &:hover {
       color: @red;
     }
@@ -234,9 +243,11 @@
 .check {
    &--red {
     color: @red;
+
     .check__mark {
       border-color: @red;
     }
+
     .check__input {
       &:checked {
         & ~ .check__mark {
@@ -245,6 +256,7 @@
       }
     }
    }
+
    &--disabled {
     pointer-events: none;
     opacity: 0,5;

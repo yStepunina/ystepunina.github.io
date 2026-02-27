@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+
     &__item {
         box-sizing: border-box;
         position: relative;
@@ -12,14 +13,17 @@
         color: @black;
         cursor: pointer;
     }
+
     &__input {
         .is-hidden();
+
         &:checked {
           & ~ .radio__mark {
            background-color: @black;
           }
         }
     }
+
   &__mark {
     box-sizing: border-box;
     display: block;
@@ -35,6 +39,7 @@
     background-color: transparent;
     transition: background-color 0.2s;
   }
+  
   &__label {
     font-weight: 400;
     font-size: 16px;
