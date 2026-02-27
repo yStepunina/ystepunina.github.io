@@ -9,9 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/styles.min.css" />
-</head>
-
-<body class="body">
+  <body class="body">
   <header class="page-header">
     <div class="page-header__container">
       <a href="#" class="page-header__logo">
@@ -55,24 +53,56 @@
       <section class="home__offers">
         <h2 class="text text--center">Я хочу</h2>
         <div class="text text--center">
-          <button type="button">Провести Мероприятия</button>
-          <button type="button">Стать арендатором</button>
+          <button type="button" class="btn--red">Провести Мероприятия</button>
+          <button type="button" class="btn--secondary">Стать арендатором</button>
         </div>
       </section>
 
+      <!-- Секция "О нас" с контентом -->
       <section class="about home__about">
         <h2 class="section__about section-title">О нас</h2>
         <div class="about__container">
-          <!-- Здесь будет контент о нас -->
+          <div class="about__content">
+            <div class="about__text">
+              <h1 class="text text--center" >Проект "Millennials"</h1>
+              <h4 class="text text--center">Вдохновлен молодыми идейными людьми, увлеченными творчеством, эмоциями и желанием
+                сделать мир лучше, проявить себя. У них есть талант и стремление, у нас возможность помочь
+                им воплотить их мечту в реальность.
+              </h4>
+            </div>
+          </div>
         </div>
+         <div class="listing__events-list">
+          <!--prettier--ignore -->
+          <article class="event-card listing__event-card">
+            <a href="#" class="event-card__link">
+              <picture class="event-card__picture">
+                <img src="assets/images/events/pic.jpg" alt="pic" class="event-card__img" />
+              </picture>
+
+               <div class="listing__events-list">
+          <!--prettier--ignore -->
+          <article class="event-card listing__event-card">
+            <a href="#" class="event-card__link">
+              <picture class="event-card__picture">
+                <img src="assets/images/events/pic2.jpg" alt="pic2" class="event-card__img" />
+              </picture>
+
+           <div class="about__content">
+            <div class="about__text">
+           <h3 class="text text--center">Мы предоставляем площади
+            для вашего мероприятия
+           </h3>  
+           </div>
+           </div>
+             
       </section>
       
+      <!-- Секция "Мероприятия" с контентом -->
       <section class="upcoming home__upcoming">
         <h2 class="upcoming__section-title section-title">Мероприятия</h2>
         <div class="upcoming__container">
           <div class="grid grid--fill">
-            
-            <!-- Первое событие -->
             <div class="grid__element">
               <article class="event-card listing__event-card">
                 <a href="#" class="event-card__link">
@@ -90,7 +120,6 @@
               </article>
             </div>
             
-            <!-- Второе событие -->
             <div class="grid__element">
               <article class="event-card listing__event-card">
                 <a href="#" class="event-card__link">
@@ -107,27 +136,106 @@
                 </a>
               </article>
             </div>
-            
-          </div> <!-- Закрытие grid -->
-        </div> <!-- Закрытие upcoming__container -->
+
+            <div class="grid__element">
+              <article class="event-card listing__event-card">
+                <a href="#" class="event-card__link">
+                  <picture class="event-card__picture">
+                    <img src="assets/images/events/art-exhibition.jpg" alt="art exhibition" class="event-card__img" />
+                  </picture>
+                  <h3 class="event-card__title">Выставка современного искусства</h3>
+                  <p class="event-card__description">
+                    Работы молодых художников в жанре абстрактного экспрессионизма и поп-арта.
+                  </p>
+                  <time datetime="2025-12-20T19:00" class="event-card__time">
+                    20.12.2025 | начало 19.00
+                  </time>
+                </a>
+              </article>
+            </div>
+          </div> 
+        </div> 
       </section>
 
+      <!-- Секция "Блог" с контентом -->
       <section class="listing home__listing">
         <h2 class="listing__section-title section-title">Блог</h2>
-        <!-- Здесь будет контент блога -->
+        <div class="blog__grid">
+          <article class="blog-card">
+            <img src="assets/images/blog/art-tips.jpg" alt="art tips" class="blog-card__image" />
+            <div class="blog-card__content">
+              <h3 class="blog-card__title">Как выбрать свою первую картину</h3>
+              <p class="blog-card__excerpt">Советы коллекционера и арт-критика для начинающих ценителей искусства...</p>
+              <div class="blog-card__meta">15 ноября 2025 | 5 мин чтения</div>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <img src="assets/images/blog/interview.jpg" alt="interview" class="blog-card__image" />
+            <div class="blog-card__content">
+              <h3 class="blog-card__title">Интервью с художником: Анна Смирнова</h3>
+              <p class="blog-card__excerpt">О творчестве, вдохновении и работе в арт-пространстве Lenni Art...</p>
+              <div class="blog-card__meta">10 ноября 2025 | 8 мин чтения</div>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <img src="assets/images/blog/events.jpg" alt="events" class="blog-card__image" />
+            <div class="blog-card__content">
+              <h3 class="blog-card__title">Топ-5 событий декабря</h3>
+              <p class="blog-card__excerpt">Самые интересные мероприятия этого месяца в нашем пространстве...</p>
+              <div class="blog-card__meta">5 декабря 2025 | 3 мин чтения</div>
+            </div>
+          </article>
+        </div>
       </section>
 
+   
       <section class="contacts home__contacts">
         <h2 class="contacts__section-title section-title">Контакты</h2>
         <div class="contacts__container">
-          <!-- Здесь будет контент контактов -->
+          <div class="contacts__grid">
+            <div class="contact-info">
+              <div class="contact-info__item">
+                <span class="contact-info__label">Адрес:</span>
+                <span class="contact-info__value">г. Москва, ул. Тверская, 15</span>
+              </div>
+              <div class="contact-info__item">
+                <span class="contact-info__label">Телефон:</span>
+                <a href="tel:+74951234567" class="contact-info__value">+7 (495) 123-45-67</a>
+              </div>
+              <div class="contact-info__item">
+                <span class="contact-info__label">Email:</span>
+                <a href="mailto:info@lenniart.ru" class="contact-info__value">info@lenniart.ru</a>
+              </div>
+              <div class="contact-info__item">
+                <span class="contact-info__label">Часы работы:</span>
+                <span class="contact-info__value">Ежедневно: 11:00 - 22:00</span>
+              </div>
+              <div class="contact-info__item">
+                <span class="contact-info__label">Социальные сети:</span>
+                <div class="social-links">
+                  <a href="#" class="social-link">VK</a>
+                  <a href="#" class="social-link">Telegram</a>
+                  <a href="#" class="social-link">Instagram</a>
+                </div>
+              </div>
+            </div>
+            <div class="contact-map">
+              <div class="map-placeholder">
+                Здесь будет карта
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-    </div> <!-- Закрытие home -->
+    </div> 
   </main>
   
   <footer class="page-footer">
-    <!-- Здесь будет контент футера -->
+    <div class="footer__container">
+      <p class="footer__copyright">© 2025 Lenni Art. Все права защищены.</p>
+    </div>
   </footer>
 
 </body>
