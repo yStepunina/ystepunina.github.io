@@ -1,24 +1,173 @@
-<div class="body">
-  <main class="main">
-    <!-- Здесь будут хлебные крошки -->
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('blocks/head.html')
+  <body class="body">
+    @@include('blocks/page-header.html')
+    <main class="main">
+      <article class="article">
+        <div class="article__container">
+          <h1 class="article__title title">Заголовок страницы</h1>
 
-    <article class="event">
-      <!-- Здесь пропущенное содержимое страницы -->
+           <img src="assets/images/Sade.jpg" alt="Sade">
 
-      <form class="reserve event__reserve">
-        <div class="reserve__checks">
-          Чекбоксы
+          <div class="article__content content">
+            <p><b>Программа мероприятия:</b></p>
+            <ul>
+              <li>20:15 - Приветствие гостей </li>
+              <li>20:30 - Первая подача блюд | Салаты</li>
+              <li>20:40 - Живой вокал | Композиция 1-3</li>
+              <li>21:20 - Подача горячих блюд</li>
+              <li>21:30 - Живой вокал | Композиции 4-7</li>
+              <li>22:15 - Подача десерта</li>
+              <li>22:30 - Живой вокал | Композиции 8-9</li>
+              <li>23:00 - Завершение вечера</li>
+            </ul>
+
+              <div class="article__content content">
+            <h4>The Best Of Sade</h4>
+            
+            <blockquote>
+              Первый альбом-компиляция Sade, выпущенный в 1994 году. Он содержит 9 треков, включая самые
+              популярные хиты группы, раритеты и их любимые треки
+            
+            Группа продемонстрировала необычайные долголетие и креативность своей творческой карьеры.
+            Она лидировала музыкальных чартах с 1994 по 1995 год, став четырехкратно платиновой в США и продемонстрировала
+            более 2 миллионов копий в Европе.
+          </blockquote>
+            <ol>
+              <li>Your Love is King</li>
+              <li>Hang On To Your Love</li>
+              <li>Smooth Operator</li>
+              <li>Jezebel</li>
+              <li>The Sweetest Taboo</li>
+              <li>Is It A Crime</li>
+              <li>Never As Good As The First Time</li>
+              <li>Love Is Stronger Than Pride</li>
+              <li>Paradise</li>
+            </ol>
+             <div class="article__content content">
+            <p><b>Забронировать столик</b></p>
+
+             	
+<form class="reserve">
+  <div class="reserve__checks">
+    <h4 class="reserve__section-title">
+      Забронировать столик
+    </h4>
+
+    <form class="reserve">
+  <div class="reserve__checks">
+    <!-- 1 стол -->
+    <label class="reserve__check check check--red">
+      <input type="checkbox" name="table_1" class="check__input" checked />
+      <span class="check__mark"></span>
+      <span class="check__label">1 стол</span>
+    </label>
+
+    <!-- 2 стол -->
+    <label class="reserve__check check">
+      <input type="checkbox" name="table_2" class="check__input" />
+      <span class="check__mark"></span>
+      <span class="check__label">2 стол</span>
+    </label>
+
+    <!-- 3 стол (недоступен) -->
+    <label class="reserve__check check check--disabled">
+      <input type="checkbox" name="table_3" class="check__input" disabled />
+      <span class="check__mark"></span>
+      <span class="check__label">3 стол</span>
+    </label>
+
+    <!-- 4 стол -->
+    <label class="reserve__check check check--red">
+      <input type="checkbox" name="table_4" class="check__input" checked />
+      <span class="check__mark"></span>
+      <span class="check__label">4 стол</span>
+    </label>
+
+    <!-- 5 стол -->
+    <label class="reserve__check check check--red">
+      <input type="checkbox" name="table_5" class="check__input" checked />
+      <span class="check__mark"></span>
+      <span class="check__label">5 стол</span>
+    </label>
+
+    <!-- 6 стол -->
+    <label class="reserve__check check check--red">
+      <input type="checkbox" name="table_6" class="check__input" checked />
+      <span class="check__mark"></span>
+      <span class="check__label">6 стол</span>
+    </label>
+
+    <!-- 7 стол -->
+    <label class="reserve__check check check--red">
+      <input type="checkbox" name="table_7" class="check__input" checked />
+      <span class="check__mark"></span>
+      <span class="check__label">7 стол</span>
+    </label>
+
+    <!-- 8 стол -->
+    <label class="reserve__check check check--red">
+      <input type="checkbox" name="table_8" class="check__input" checked />
+      <span class="check__mark"></span>
+      <span class="check__label">8 стол</span>
+    </label>
+
+    <!-- 9 стол -->
+    <label class="reserve__check check check--red">
+      <input type="checkbox" name="table_9" class="check__input" checked />
+      <span class="check__mark"></span>
+      <span class="check__label">9 стол</span>
+    </label>
+
+    <!-- 10 стол -->
+    <label class="reserve__check check check--red">
+      <input type="checkbox" name="table_10" class="check__input" checked />
+      <span class="check__mark"></span>
+      <span class="check__label">10 стол</span>
+    </label>
+
+    <!-- 11 стол -->
+    <label class="reserve__check check check--red">
+      <input type="checkbox" name="table_11" class="check__input" checked />
+      <span class="check__mark"></span>
+      <span class="check__label">11 стол</span>
+    </label>
+  </div>
+</form>
+<form class="reserve">
+  <!-- Прочие элементы формы -->
+              
+  <div class="reserve__scheme">
+    <div class="reserve__scheme-container">
+      <h4 class="reserve__scheme-title">Сцена</h4>
+                  
+      <div class="reserve__scheme-wrapper">
+        <svg
+          class="reserve__scene scene"
+          width="780"
+          height="399"
+          viewBox="0 0 780 399"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <!-- Содержимое svg -->
+        </svg>
+      </div>
+    </div>
+  </div>
+             
+  <!-- Прочие элементы формы -->
+</form>
+            <blockquote>
+              Здесь содержится цитата
+            </blockquote>
+
+            <img src="assets/images/image.jpg" alt="Подпись картинки">
+          </div>
         </div>
-        <div class="reserve__scheme">
-          Схема столов
-        </div>
-        <div class="reserve__order">
-          Оформление заказа
-        </div>
-        <div class="reserve__legend">
-          Легенда
-        </div>
-      </form>
-    </article>
-  </main>
-</div>
+      </article>
+    </main>
+    @@include('blocks/page-footer.html')
+  </body>
+</html>

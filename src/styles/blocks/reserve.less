@@ -33,10 +33,27 @@
   }
 
   &__checks {
-    grid-area: checks;
-    display: flex;
+   display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+    max-width: 200px;
+    padding: 20px;
+    background-color: #f9f9f9; /* Для наглядности */
+    border-radius: 8px;
+  }
+
+   .reserve__check {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    width: 100%;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
 
   &__order {
     grid-area: order;
@@ -72,5 +89,63 @@
       "checks"
       "order"; 
     }
+
+    .reserve__check:hover {
+    background-color: rgba(0, 0, 0, 0.05);
   }
-}
+
+  .check__mark {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    flex-shrink: 0;
+    transition: all 0.2s;
+  }
+
+  .check--red .check__mark {
+    background-color: #ff0000;
+    border-color: #ff0000;
+    position: relative;
+  }
+
+  .check--red .check__mark::after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 4px;
+    width: 6px;
+    height: 11px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(45deg);
+  }
+
+  .check--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .check--disabled .check__mark {
+    background-color: #e0e0e0;
+    border-color: #999;
+  }
+
+  .check__label {
+    font-size: 16px;
+    color: #333;
+    white-space: nowrap;
+  }
+
+  .check--red .check__label {
+    color: #ff0000;
+  }
+
+  .check__input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+} 
