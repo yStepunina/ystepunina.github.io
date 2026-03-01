@@ -1,151 +1,168 @@
 .reserve {
   display: grid;
-  grid-template-columns: 405px 1fr;
-  /* grid-template-columns: 405px calc(89% - 405px); */
+  /* grid-template-columns: 405px 1fr; */
   gap: 65px 11%;
   grid-template-areas: 
     "checks scheme"
-    "order legend"; 
+    "order legend";
   width: 100%;
+}
 
-  @media @bw1240 {
-     grid-template-columns: 340px 1fr;
-     gap: 65px 6.5%;
-  }
-
-  @media @bw1020 {
-    gap: 60px;
-    grid-template-columns: 1fr 390px;
-    grid-template-areas: 
-    "scheme scheme"
-    "checks legend"
-    "checks order";
-  }
-
-  @media @bw768 {
-    grid-auto-columns: 100%;
-    gap: 40px;
-    grid-template-areas: 
-    "scheme"
-    "legend"
-    "checks"
-    "order";
-  }
-
-  &__checks {
-   display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    width: 100%;
-    max-width: 200px;
-    padding: 20px;
-    background-color: #f9f9f9; /* Для наглядности */
-    border-radius: 8px;
-  }
-
-   .reserve__check {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    cursor: pointer;
-    width: 100%;
-    padding: 4px 8px;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-  }
-
-  &__order {
-    grid-area: order;
-  }
-
-  &__scheme {
-    grid-area: scheme;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  
-
-  @media @bw1340 {
+@media @bw1340px {
+  .reserve {
     gap: 65px 6.5%;
     grid-template-columns: 340px calc(93.5% - 340px);
   }
+}
 
-  @media @bw1020 {
+@media @bw1240px {
+  .reserve {
+    grid-template-columns: 340px 1fr;
+    gap: 65px 6.5%;
+  }
+}
+
+@media @bw1020px {
+  .reserve {
     gap: 60px;
-    grid-template-columns: auto 390px;
+    grid-template-columns: 1fr 390px;
     grid-template-areas: 
       "scheme scheme"
       "checks legend"
-      "checks order"; 
+      "checks order";
   }
+}
 
-  @media @bw768 {
+@media @bw768 {
+  .reserve {
     grid-template-columns: 100%;
+    gap: 40px;
     grid-template-areas: 
       "scheme"
       "legend"
       "checks"
-      "order"; 
-    }
-
-    .reserve__check:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+      "order";
   }
+}
 
-  .check__mark {
-    width: 24px;
-    height: 24px;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: white;
-    flex-shrink: 0;
-    transition: all 0.2s;
-  }
+.reserve__checks {
+  grid-area: checks;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  max-width: 200px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
 
-  .check--red .check__mark {
-    background-color: #ff0000;
-    border-color: #ff0000;
-    position: relative;
-  }
+.reserve__check {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  width: 100%;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
 
-  .check--red .check__mark::after {
-    content: '';
-    position: absolute;
-    left: 7px;
-    top: 4px;
-    width: 6px;
-    height: 11px;
-    border-bottom: 2px solid white;
-    border-right: 2px solid white;
-    transform: rotate(45deg);
-  }
+.reserve__check:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
 
-  .check--disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
+.reserve__order {
+  grid-area: order;
+}
 
-  .check--disabled .check__mark {
-    background-color: #e0e0e0;
-    border-color: #999;
-  }
+.reserve__scheme {
+  grid-area: scheme;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
 
-  .check__label {
-    font-size: 16px;
-    color: #333;
-    white-space: nowrap;
-  }
+.reserve__tickets {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
 
-  .check--red .check__label {
-    color: #ff0000;
-  }
+.reserve__qty::after {
+  content: " " attr(data-caption) " | " attr(data-price);
+}
 
-  .check__input {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-} 
+.reserve__sum::after {
+  content: attr(data-currency);
+  margin-left: 4px;
+  font-size: 0.95em;
+}
+
+.reserve__total::before {
+  content: attr(data-caption);
+  margin-right: 30px;
+}
+
+.reserve__total::after {
+  content: attr(data-currency);
+  margin-left: 4px;
+  font-size: 0.95em;
+}
+
+/* Стили для check */
+.check__mark {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.check__label {
+  font-size: 16px;
+  color: #333;
+  white-space: nowrap;
+}
+
+.check__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.check--red .check__mark {
+  background-color: #ff0000;
+  border-color: #ff0000;
+  position: relative;
+}
+
+.check--red .check__mark::after {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 4px;
+  width: 6px;
+  height: 11px;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  transform: rotate(45deg);
+}
+
+.check--red .check__label {
+  color: #ff0000;
+}
+
+.check--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.check--disabled .check__mark {
+  background-color: #e0e0e0;
+  border-color: #999;
+}
