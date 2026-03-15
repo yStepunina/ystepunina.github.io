@@ -16,6 +16,19 @@
      height: 70px;
   }
 
+  .page-header {
+  /*...*/
+  &__nav-toggle {
+    /*...*/
+    &::before,
+    &::after {
+      /*...*/
+      transform-origin: 50% 50%;
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+  }
+}
+
   &::before {
     content: "";
     display: block;
