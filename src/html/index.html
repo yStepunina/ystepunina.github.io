@@ -1,15 +1,16 @@
+html
 <!DOCTYPE html>
 <html lang="ru" class="show-event-popup">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
   <title>Lenni Art</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/styles.min.css" />
-  <body class="body">
+</head>
+<body class="body">
   <header class="page-header">
     <div class="page-header__container">
       <a href="#" class="page-header__logo">
@@ -53,9 +54,9 @@
       <section class="home__offers">
         <h2 class="text text--center">Я хочу</h2>
         <div class="text text--center">
-        <button type="button" class="offers__btn btn btn--red" id="js-eventOpenBtn">
-         Провести мероприятие
-        </button>
+          <button type="button" class="offers__btn btn btn--red" id="js-eventOpenBtn">
+            Провести мероприятие
+          </button>
           <button type="button" class="btn--secondary">Стать арендатором</button>
         </div>
       </section>
@@ -66,157 +67,110 @@
         <div class="about__container">
           <div class="about__content">
             <div class="about__text">
-              <h1 class="text text--center" >Проект "Millennials"</h1>
+              <h1 class="text text--center">Проект "Millennials"</h1>
               <h4 class="text text--center">Вдохновлен молодыми идейными людьми, увлеченными творчеством, эмоциями и желанием
                 сделать мир лучше, проявить себя. У них есть талант и стремление, у нас возможность помочь
                 им воплотить их мечту в реальность.
               </h4>
             </div>
           </div>
+          <div class="about__text">
+            <h3 class="text text--center">Мы предоставляем площади
+              для вашего мероприятия
+            </h3>
+            <img src="./images/pici.jpg" alt="pici" class="event-card__img" />
+          </div>
         </div>
-         <div class="listing__events-list">
-          <!--prettier--ignore -->
-          <article class="event-card listing__event-card">
-            <a href="#" class="event-card__link">
-              <picture class="event-card__picture">
-                <img src="./images/pic .jpg" alt="pic" class="event-card__img" />
-              </picture>
-
-               <div class="listing__events-list">
-          <!--prettier--ignore -->
-          <article class="event-card listing__event-card">
-            <a href="#" class="event-card__link">
-              <picture class="event-card__picture">
-                <img src="./images/pica.jpg" alt="pica" class="event-card__img" />
-              </picture>
-
-           <div class="about__content">
-            <div class="about__text">
-           <h3 class="text text--center">Мы предоставляем площади
-            для вашего мероприятия
-           </h3>  
-
-            <picture class="event-card__picture">
-                <img src="./images/pici.jpg" alt="pici" class="event-card__img" />
-              </picture>
-           </div>
-           </div>
-             
       </section>
-      
+
       <!-- Секция "Мероприятия" с контентом -->
       <section class="upcoming home__upcoming">
         <h2 class="upcoming__section-title section-title">Мероприятия</h2>
         <div class="upcoming__container">
           <div class="grid grid--fill">
-      
-                  <picture class="event-card__picture">
-                    <img src="./images/nirva.jpg" alt="nirva" class="event-card__img" />
-                  </picture>
-          
-                  <picture class="event-card__picture">
-                    <img src="./images/stuff.jpg" alt="stuff" class="event-card__img" />
-                  </picture>
-      
-                  <picture class="event-card__picture">
-                    <img src="./images/best.jpg" alt="best" class="event-card__img" />
-                  </picture>
+            <picture class="event-card__picture">
+              <img src="./images/nirva.jpg" alt="nirva" class="event-card__img" />
+            </picture>
+
+
+<picture class="event-card__picture">
+              <img src="./images/stuff.jpg" alt="stuff" class="event-card__img" />
+            </picture>
+            <picture class="event-card__picture">
+              <img src="./images/best.jpg" alt="best" class="event-card__img" />
+            </picture>
           </div>
         </div>
       </section>
 
-    
       <section class="listing home__listing">
         <h2 class="listing__section-title section-title">Блог</h2>
         <div class="blog__grid">
           <article class="blog-card">
             <img src="./images/foto.jpg" alt="foto" class="blog-card__image" />
           </article>
-
           <article class="blog-card">
             <img src="./images/vrt.jpg" alt="vrt" class="blog-card__image" />
           </article>
-            
-
           <article class="blog-card">
             <img src="./images/radio.jpg" alt="radio" class="blog-card__image" />
           </article>
-       
-           
-              <img src="./images/poloska.jpg" alt="poloska">
-
-              <blockquote>
-             Календарь мероприятий
-            </blockquote>
-
-            
-              <blockquote>
-             Провести мероприятие
-            </blockquote>
-
-            
-              <blockquote>
-            Стать арендатором
-            </blockquote>
-              
-            
-              <blockquote>
-            Наши проекты
-            </blockquote>
-
-            
-              <blockquote>
-            Контакты 
-            </blockquote>
-
-
-             <blockquote>
-           Подпишись и будь в курсе происходящего
-            </blockquote>
-            <div class="form__list"></div>
-             <label class="field form__field form__field--w50 ">
-                  <span class="field__label">Email*</span>
-                  <input class="field__input" tupe="email" name="email" placeholder="Email*" required />
-                </label>
-              </div>
-              <div class="form__check-list">
-          <label class="form__check check">
-            <input
-              type="checkbox"
-              name="agree"
-              class="check__input"
-              required
-              checked
-            />
-            <span class="check__mark"></span>
-            <span class="check__label check__label--s">
-              Я соглашаюсь с пользовательским соглашением и с политикой
-              использования персональных данных
-            </span>
-          </label>
         </div>
-            </div>
-          </div> 
-        </div> 
-      </article>
+      </section>
 
-            <div class="contact-map">
-              <div class="map-placeholder">
-                Здесь будет карта
-              </div>
+      <section class="contact">
+        <div class="form-container">
+          <div class="form__list">
+            <div class="contact-info">
+              <h2 class="text text--center">Контакты</h2>
+              <blockquote>Календарь мероприятий</blockquote>
+              <blockquote>Провести мероприятие</blockquote>
+              <blockquote>Стать арендатором</blockquote>
+              <blockquote>Наши проекты</blockquote>
+              <blockquote>Контакты</blockquote>
+            </div>
+            <div class="form__field">
+              <label class="field form__field form__field--w50">
+                <span class="field__label">Email*</span>
+                <input class="field__input" type="email" name="email" placeholder="Email*" required />
+              </label>
+            </div>
+            <div class="form__check-list">
+              <label class="form__check check">
+                <input
+                  type="checkbox"
+                  name="agree"
+                  class="check__input"
+                  required
+                  checked
+                />
+                <span class="check__mark"></span>
+                <span class="check__label check__label--s">
+                  Я соглашаюсь с пользовательским соглашением и с политикой
+                  использования персональных данных
+                </span>
+              </label>
             </div>
           </div>
         </div>
       </section>
-    </div> 
+
+      <div class="contact-map">
+        <div class="map-placeholder">
+          Здесь будет карта
+        </div>
+      </div>
+    </div>
   </main>
-  
+
   <footer class="page-footer">
     <div class="footer__container">
-      <p class="footer__copyright">© Milennials 2025 </p>
+      <p class="footer__copyright">© Milennials 2025</p>
     </div>
   </footer>
-<script src="scripts/main.min.js"></script>
+
+  <script src="scripts/main.min.js"></script>
+
 </body>
 
 </html>
