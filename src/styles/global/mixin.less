@@ -64,3 +64,26 @@
   visibility: hidden !important;
   pointer-events: none !important;
 }
+
+.show-nav {
+  body {
+    @media @bw1020 {
+      overflow: hidden;
+    }
+  }
+  .page-header__nav {
+     @media @bw1020 {
+      transform: translateX(0);
+   }
+ }
+
+  .page-header__nav-toggle {
+    &::before {
+      box-shadow: none;
+      transform: translate(0, 6px) rotate(45deg);
+    }
+    &::after {
+      transform: translate(0, -6px)  rotate(-45deg); 
+    }
+  }
+}
